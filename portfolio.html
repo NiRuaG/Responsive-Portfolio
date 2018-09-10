@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio Page</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/portfolio_styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="flex main-width">
+      <div id="name">
+        <h2>Andrew Gaurin</h2>
+      </div>
+      <nav>
+        <!-- The 'bad' tag formatting is because the otherwise usual seperation in code introduces unwanted whitespace that gets displayed -->
+        <!-- aka whitespace between inline-block elements -->
+        <!-- https://davidwalsh.name/remove-whitespace-inline-block -->
+        <!-- An alternative is to put them all on same line.. compromises -->
+         <a href="index.html">About</a
+        ><a class="nav_here">Portfolio</a
+        ><a href="contact.html">Contact</a
+        ><!-- add nav tabs here -->
+      </nav>
+    </div>
+  </header>
+  <section class="main-content-container main-width">
+    <div class="main-content">
+      <h2>Portfolio</h2>
+      <hr>
+      <div id="portfolio-container">
+        <a class="portfolio-item">
+          <img src="./assets/images/technics1.jpg" alt="Hangman, Preview image">
+          <h3 class="banner">Hangman</h3>
+          <div class="descrip">
+            <h4>Hangman</h4>
+            <p>Hangman project description text. Long enough to wrap the text.</p>
+          </div>
+        </a>
+        <a class="portfolio-item">
+          <img src="./assets/images/technics2.jpg" alt="RPG Game, Preview image">
+          <h3 class="banner">RPG Game</h3>
+          <div class="descrip">
+            <h4>RPG Game</h4>
+            <p>RPG Game project description text.</p>
+          </div>
+        </a>
+        <a class="portfolio-item">
+          <img src="./assets/images/technics3.jpg" alt="Trivia Game, Preview image">
+          <h3 class="banner">Trivia Game</h3>
+          <div class="descrip">
+            <h4>Trivia Game</h4>
+            <p>Trivia Game project description text.</p>
+          </div>
+        </a>
+        <a class="portfolio-item">
+          <img src="./assets/images/technics4.jpg" alt="Info Widget, Preview image">
+          <h3 class="banner">Rutgers Info Widget</h3>
+          <div class="descrip">
+            <h4>Rutgers Info Widget</h4>
+            <p>Info Widget project description text.</p>
+          </div>
+        </a>
+        <a class="portfolio-item">
+          <img src="./assets/images/technics5.jpg" alt="Rock-Paper-Scissors, Preview image">
+          <h3 class="banner">Rock Paper Scissors</h3>
+          <div class="descrip">
+            <h4>Rock Paper Scissors</h4>
+            <p>Rock Paper Scissors project description text.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer>Copyright &copy;</footer>
+</body>

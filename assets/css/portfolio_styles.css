@@ -1,0 +1,114 @@
+#portfolio-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.portfolio-item {
+  box-sizing: border-box; /* needed for border hover effect */
+  max-width: 30%;
+  margin: 1rem 2rem 1rem 0;
+  /* height: auto; */
+  position: relative;
+  background: #4aaaad; /* hover overrides */
+  color: #ffffff; /* hover overrides */
+}
+
+.portfolio-item:hover {
+  background: #ffffff;
+  color: #4aaaad;
+}
+
+.portfolio-item::before,
+.portfolio-item::after {
+  box-sizing: inherit; /* border hover effect */
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+}
+
+.portfolio-item::before {
+  top: 0;
+  left: 0;
+}
+
+.portfolio-item::after {
+  bottom: 0;
+  right: 0;
+}
+
+.portfolio-item:hover::before,
+.portfolio-item:hover::after {
+  height: 100%;
+  width: 100%;
+}
+
+.portfolio-item:hover::before {
+  border-top-color: #4aaaad;
+  border-right-color: #4aaaad;
+  transition:
+    width 0.125s,  /* width first */ 
+    height 0.125s 0.125s; /* then height */
+}
+
+.portfolio-item:hover::after {
+  border-bottom-color: #4aaaad;
+  border-left-color: #4aaaad;
+  transition: 
+    border-color 0s 0.25s, /*  Wait for ::before to finish before showing border */ 
+    width 0.125s ease-out 0.25s,
+    height 0.125s 0.375s;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  display: block; /* if otherwise inline, produces gap at bottom for 'descenders' https://stackoverflow.com/questions/31444891/mystery-white-space-underneath-image-tag/31445364#31445364 */
+}
+
+.portfolio-item .banner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.5rem;
+  color: inherit;
+  background: inherit;
+  padding: 0.75rem 0;
+  text-align: center;
+  max-height: 1rem;
+  width: 100%; /* hover overrides */
+  transition: 
+    width 2s, 
+    opacity 1.25s 0.125s;
+}
+
+.portfolio-item:hover .banner {
+  width: 0;
+  opacity: 0;
+}
+
+.portfolio-item .descrip {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 99%;
+  margin: 3px auto;
+  padding: 5px;
+  opacity: 0;
+  background: #ffffff;
+}
+
+.portfolio-item:hover .descrip {
+  opacity: 0.8;
+  transition: opacity 1s 1.5s;
+}
+
+.portfolio-item .descrip h4 {
+  margin-bottom: 0.5rem;
+  font-weight: bolder;
+}
+
+.portfolio-item .descrip p {
+  line-height: 1.5;
+}
