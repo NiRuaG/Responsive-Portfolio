@@ -1,8 +1,9 @@
 #about-copy img {
-  max-height: 10rem;
+  width: 20%;
+  height: auto;
   float: left;
   margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 #about-copy p {
@@ -11,4 +12,23 @@
 
 #about-copy p:nth-child(n + 2) {
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 980px) {
+  #about-copy img {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about-copy img {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #about-copy img {
+    min-width: 200px;
+    width: 50%;
+  }
 }
