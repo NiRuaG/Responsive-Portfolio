@@ -177,9 +177,17 @@ footer {
     flex-grow: 1;
   }
 
+  nav a:first-of-type {
+    border-radius: 0;
+  }
+  
+  nav a:last-of-type {
+    border-radius: 0;
+  }
+
   .main-content {
     border-left: none;
     border-right: none;
   }
-  
+
 }
