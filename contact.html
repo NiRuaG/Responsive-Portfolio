@@ -12,38 +12,37 @@
 </head>
 
 <body>
-  <header>
-    <div class="flex main-width">
-      <div id="name">
-        <h2>Andrew Gaurin</h2>
+  <header class="my-bg-white">
+    <div class="x-margin">
+      <div class="header-content horiz-centered main-width">
+        <h2 class="my-bg-primary my-text-white my-text-family">Andrew Gaurin</h2>
+        <nav>
+          <a href="index.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a class="nav_here">Contact</a>
+        </nav>
       </div>
-      <nav>
-        <!-- The 'bad' tag formatting is because the otherwise usual seperation in code introduces unwanted whitespace that gets displayed -->
-        <!-- aka whitespace between inline-block elements -->
-        <!-- https://davidwalsh.name/remove-whitespace-inline-block -->
-        <!-- An alternative is to put them all on same line.. compromises -->
-         <a href="index.html">About</a
-        ><a href="portfolio.html">Portfolio</a
-        ><a class="nav_here">Contact</a
-        ><!-- add nav tabs here -->
-      </nav>
     </div>
   </header>
-  <section class="main-content-container main-width">
-    <div class="main-content">
-      <h2>Contact</h2>
-      <hr>
-      <form id="contact-form">
-        <label>Name</label><br>
-        <input type="text" name="msg_name" value="John Smith"><br>
-        <label>Email</label><br>
-        <input type="email" name="msg_email" value="example@gmail.com"><br>
-        <label>Message</label><br>
-        <textarea></textarea><br>
-        <button onclick='alert("Message submissions coming soon, thank you!")'>Submit</button>
-      </form>
+
+  <main>
+    <div class="x-margin">
+      <div class="horiz-centered main-content main-width">
+        <h2 class="my-text-primary my-text-family">About Me</h2>
+        <hr>
+        <form id="contact-form">
+          <label>Name</label><br>
+          <input type="text" name="msg_name" value="John Smith"><br>
+          <label>Email</label><br>
+          <input type="email" name="msg_email" value="example@gmail.com"><br>
+          <label>Message</label><br>
+          <textarea></textarea><br>
+          <button onclick='alert("Message submissions coming soon, thank you!")'>Submit</button>
+        </form>
+      </div>
     </div>
-  </section>
+  </main>
+
   <footer>Copyright &copy;</footer>
 </body>
 
