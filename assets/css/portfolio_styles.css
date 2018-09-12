@@ -1,13 +1,13 @@
 #portfolio-container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .portfolio-item {
   box-sizing: border-box; /* needed for border hover effect */
-  max-width: 30%;
-  margin: 1rem 2rem 1rem 0;
-  /* height: auto; */
+  width: 32%;
+  margin: 1rem 0.25rem 0.5rem 0;
   position: relative;
 }
 
@@ -40,17 +40,15 @@
 .portfolio-item:hover::before {
   border-top-color: #4aaaad;
   border-right-color: #4aaaad;
-  transition:
-    width 0.125s,  /* width first */ 
-    height 0.125s 0.125s; /* then height */
+  transition: width 0.125s, /* width first */ height 0.125s 0.125s; /* then height */
 }
 
 .portfolio-item:hover::after {
   border-bottom-color: #4aaaad;
   border-left-color: #4aaaad;
-  transition: 
-    border-color 0s 0.25s, /*  Wait for ::before to finish before showing border */ 
-    width 0.125s ease-out 0.25s,
+  transition: border-color 0s 0.25s,
+    /*  Wait for ::before to finish before showing border */ width 0.125s
+      ease-out 0.25s,
     height 0.125s 0.375s;
 }
 
@@ -64,13 +62,11 @@
   bottom: 1rem;
   padding: 0.75rem 0;
   white-space: nowrap;
-  text-align: center;    /* hover overrides */
+  text-align: center;
   background: #4aaaad; /* hover overrides */
-  color: #ffffff;      /* hover overrides */
-  width: 100%;           /* hover overrides */
-  transition: 
-    width 2s, 
-    opacity 1.25s 0.125s;
+  color: #ffffff; /* hover overrides */
+  width: 100%; /* hover overrides */
+  transition: width 2s, opacity 1.25s 0.125s;
 }
 
 .portfolio-item:hover .banner {
@@ -86,8 +82,10 @@
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  height: 100%;
-  margin: 3px 3px 2px 2px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 3px 4px 2px 2px;
   padding: 0.5rem;
   opacity: 0;
 }
@@ -104,4 +102,32 @@
 
 .portfolio-item .descrip p {
   line-height: 1.5;
+}
+
+@media screen and (max-width: 980px) {
+  .portfolio-item {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-item {
+    width: 48%;
+    margin-top: 0.5rem;
+  }
+
+  .portfolio-item .banner {
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .portfolio-item {
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .portfolio-item .banner {
+    padding: 0.75rem 0;
+  }
 }
