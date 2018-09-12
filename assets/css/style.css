@@ -146,19 +146,19 @@ footer {
 
 @media screen and (max-width: 980px) {
   .main-content {
-    background-color: #333;
+    background-color: yellowgreen
   }
 }
 
 @media screen and (max-width: 768px) {
   .main-content {
-    background-color: darkred;
+    background-color: darkorange;
   }
 }
 
 @media screen and (max-width: 640px) {
   .main-content {
-    background-color: darkblue;
+    background-color: darkred;
   }
 
   .x-margin {
