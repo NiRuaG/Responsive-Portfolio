@@ -9,13 +9,6 @@
   margin: 1rem 2rem 1rem 0;
   /* height: auto; */
   position: relative;
-  background: #4aaaad; /* hover overrides */
-  color: #ffffff; /* hover overrides */
-}
-
-.portfolio-item:hover {
-  background: #ffffff;
-  color: #4aaaad;
 }
 
 .portfolio-item::before,
@@ -25,7 +18,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  border: 3px solid transparent;
+  border: 4px solid transparent;
 }
 
 .portfolio-item::before {
@@ -68,43 +61,43 @@
 
 .portfolio-item .banner {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.5rem;
-  color: inherit;
-  background: inherit;
+  bottom: 1rem;
   padding: 0.75rem 0;
-  text-align: center;
-  max-height: 1rem;
-  width: 100%; /* hover overrides */
+  white-space: nowrap;
+  text-align: center;    /* hover overrides */
+  background: #4aaaad; /* hover overrides */
+  color: #ffffff;      /* hover overrides */
+  width: 100%;           /* hover overrides */
   transition: 
     width 2s, 
     opacity 1.25s 0.125s;
 }
 
 .portfolio-item:hover .banner {
+  color: #4aaaad;
+  background: #ffffff;
   width: 0;
   opacity: 0;
 }
 
 .portfolio-item .descrip {
+  color: #4aaaad;
+  background: #ffffff;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   height: 100%;
-  width: 99%;
-  margin: 3px auto;
-  padding: 5px;
+  margin: 3px 3px 2px 2px;
+  padding: 0.5rem;
   opacity: 0;
-  background: #ffffff;
 }
 
 .portfolio-item:hover .descrip {
-  opacity: 0.8;
-  transition: opacity 1s 1.5s;
+  opacity: 0.85;
+  transition: opacity 1s 1.25s;
 }
 
-.portfolio-item .descrip h4 {
+.portfolio-item .descrip h3 {
   margin-bottom: 0.5rem;
   font-weight: bolder;
 }
