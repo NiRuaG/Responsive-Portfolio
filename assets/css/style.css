@@ -138,28 +138,29 @@ main {
 footer {
   background: #666666;
   border-top: 5px solid #4aaaa5;
-  padding: 30px 0 5px;
+  padding: 1.5rem 0;
+  line-height: 3rem;
   color: #ffffff;
   font-size: 0.75rem;
   text-align: center;
 }
 
 @media screen and (max-width: 980px) {
-  .main-content {
+  /* .main-content {
     background-color: yellowgreen
-  }
+  } */
 }
 
 @media screen and (max-width: 768px) {
-  .main-content {
+  /* .main-content {
     background-color: darkorange;
-  }
+  } */
 }
 
 @media screen and (max-width: 640px) {
-  .main-content {
+  /* .main-content {
     background-color: darkred;
-  }
+  } */
 
   .x-margin {
     margin-left: 0;
