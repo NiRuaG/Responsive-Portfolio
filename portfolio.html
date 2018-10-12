@@ -57,12 +57,12 @@
               <p>Answer multiple-choice trivia questions on Archer character from the FX TV show.</p>
             </div>
           </a>
-          <a class="portfolio-item">
-            <img src="./assets/images/technics4.jpg" alt="Info Widget, Preview image">
-            <h3 class="banner">Rutgers Info Widget</h3>
+          <a class="portfolio-item" href="./../GiphyAPI/">
+            <img id="giphyImg" src="#" alt="Random gif Image">
+            <h3 class="banner">Gif Tastic</h3>
             <div class="descrip">
-              <h3>Rutgers Info Widget</h3>
-              <p>Info Widget project description text.</p>
+              <h3>Giftastic Giphy API</h3>
+              <p>View animated gif's on topics of your choice.</p>
             </div>
           </a>
 
@@ -82,4 +82,19 @@
 
   <footer>Copyright &copy;</footer>
 
+  <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          console.log(JSON.parse(this.response).data[0].images);
+          document.getElementById("giphyImg")
+            .setAttribute("src", 
+              JSON.parse(this.response)
+              .data[0].images.fixed_width.url);
+        }
+      };
+  
+      xhttp.open("GET", "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=1&fmt=json&rating=g", true);
+      xhttp.send();
+    </script>
 </body>
