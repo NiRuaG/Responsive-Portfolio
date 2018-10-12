@@ -57,7 +57,7 @@
               <p>Answer multiple-choice trivia questions on Archer character from the FX TV show.</p>
             </div>
           </a>
-          <a class="portfolio-item" href="./../GiphyAPI/">
+          <a class="portfolio-item" href="./../GiphyAPI/" style="display: flex; justify-content: center">
             <img id="giphyImg" src="#" alt="Random gif Image">
             <h3 class="banner">Gif Tastic</h3>
             <div class="descrip">
@@ -86,7 +86,6 @@
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          console.log(JSON.parse(this.response).data[0].images);
           document.getElementById("giphyImg")
             .setAttribute("src", 
               JSON.parse(this.response)

@@ -53,9 +53,10 @@
 }
 
 .portfolio-item img {
-  /* max-width: 100%; */
-  width: 100%;
-  height: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
   display: block; /* if otherwise inline, produces gap at bottom for 'descenders' https://stackoverflow.com/questions/31444891/mystery-white-space-underneath-image-tag/31445364#31445364 */
 }
 
