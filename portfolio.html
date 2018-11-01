@@ -6,81 +6,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio Page</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu:500" rel="stylesheet"> 
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/portfolio_styles.css">
 </head>
 
-<body>
-  <header class="my-bg-white">
-    <div class="x-margin">
-      <div class="header-content horiz-centered main-width">
-        <h2 class="my-bg-primary my-text-white my-text-family">Andrew Gaurin</h2>
-        <nav>
-          <a href="index.html">About</a>
-          <a class="nav_here">Portfolio</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-  </header>
+<body class="my-bg-dark">
+    <header class="my-bg-primary">
+      <div class="x-margin">
+        <div class="header-content horiz-centered main-width">
+          <h2 class="my-bg-secondary my-text-white my-text-family">Andrew Gaurin</h2>
+          <nav>
+              <a href="index.html">About</a>
+              <a class="nav_here">Portfolio</a>
+              <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+    </header>
 
   <main>
     <div class="x-margin">
       <div class="horiz-centered main-content main-width">
-        <h2 class="my-text-primary my-text-family">Portfolio</h2>
+        <section>
+          <h2 class="my-text-primary my-text-family">Portfolio</h2>
+          <a href="https://github.com/NiRuaG">
+            <i class="my-text-primary fab fa-github fa-3x"></i>
+          </a>
+        </section>
         <hr>
 
         <div id="portfolio-container">
 
-          <a class="portfolio-item" href="./../Word-Guess-Game/">
-            <img src="./assets/images/WordGuessGame.jpg" alt="Word Guess Game, Preview image">
-            <h3 class="banner">Word Guess Game</h3>
-            <div class="descrip">
-              <h3>Word Guess Game</h3>
-              <p>Try to complete the word before running out of guesses!</p>
+            <div class="portfolio-item-wrapper">
+              <a href="./../Word-Guess-Game/">
+                <div class="portfolio-item">
+                  <img src="./assets/images/WordGuessGame.jpg" alt="Word Guess Game, Preview image">
+                  <h3 class="banner">Word Guess Game</h3>
+                  <div class="descrip">
+                    <h3>Word Guess Game</h3>
+                    <p>Try to complete the word before running out of guesses!</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-          <a class="portfolio-item" href="./../Unit-4-Game/">
-            <img src="./assets/images/swrpg.jpeg" alt="Star Wars RPG Game, Preview image">
-            <h3 class="banner">Star Wars RPG Game</h3>
-            <div class="descrip">
-              <h3>Star Wars RPG Game</h3>
-              <p>Defeat your enemies in arena combat!</p>
+        
+            <div class="portfolio-item-wrapper">
+              <a href="./../Unit-4-Game/">
+                <div class="portfolio-item">
+                  <img src="./assets/images/swrpg.jpeg" alt="Star Wars RPG Game, Preview image">
+                  <h3 class="banner">Star Wars RPG Game</h3>
+                  <div class="descrip">
+                    <h3>Star Wars RPG Game</h3>
+                    <p>Defeat your enemies in arena combat!</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
+        
+            <div class="portfolio-item-wrapper">
+              <a href="./../TriviaGame/">
+                <div class="portfolio-item">
+                  <img src="./assets/images/Archer Trivia.png" alt="Archer Trivia Game, Preview image">
+                  <h3 class="banner">Archer Trivia Game</h3>
+                  <div class="descrip">
+                    <h3>Archer Trivia Game</h3>
+                    <p>Answer multiple-choice trivia questions on Archer character from the FX TV show.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-          <a class="portfolio-item" href="./../TriviaGame/">
-            <img src="./assets/images/Archer Trivia.png" alt="Archer Trivia Game, Preview image">
-            <h3 class="banner">Archer Trivia Game</h3>
-            <div class="descrip">
-              <h3>Archer Trivia Game</h3>
-              <p>Answer multiple-choice trivia questions on Archer character from the FX TV show.</p>
+            <div class="portfolio-item-wrapper">
+              <a href="./../RPS-Multiplayer/">
+                <div class="portfolio-item">
+                  <img src="./assets/images/rpsls.jpg" alt="Rock-Paper-Scissors-Lizard-Spock, Preview image">
+                  <h3 class="banner">RPSLS Multiplayer</h3>
+                  <div class="descrip">
+                    <h3>RPSLS Multiplayer</h3>
+                    <p>Play your favorite game of Rock-Paper-Scissors-Lizard-Spock heads-up against an online challenger.</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-          <a class="portfolio-item" href="./../GiphyAPI/" style="display: flex; justify-content: center">
-            <img id="giphyImg" src="#" alt="Random gif Image">
-            <h3 class="banner">Gif Tastic</h3>
-            <div class="descrip">
-              <h3>Giftastic Giphy API</h3>
-              <p>View animated gif's on topics of your choice.</p>
-            </div>
-          </a>
 
-          <a class="portfolio-item" href="./../RPS-Multiplayer/">
-            <img src="./assets/images/rpsls.jpg" alt="Rock-Paper-Scissors-Lizard-Spock, Preview image">
-            <h3 class="banner">RPSLS Multiplayer</h3>
-            <div class="descrip">
-              <h3>RPSLS Multiplayer</h3>
-              <p>Play your favorite game of Rock-Paper-Scissors-Lizard-Spock heads-up against an online challenger.</p>
-            </div>
-          </a>
+            <div class="portfolio-item-wrapper">
+                <a href="./../GiphyAPI/">
+                  <div class="portfolio-item">
+                    <img id="giphyImg" src="#" alt="Random gif Image">
+                    <h3 class="banner">Gif Tastic</h3>
+                    <div class="descrip">
+                      <h3>Giftastic Giphy API</h3>
+                      <p>View animated gif's on topics of your choice.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
         </div>
-
       </div>
     </div>
   </main>
 
-  <footer>Copyright &copy;</footer>
+  <footer class="my-bg-primary">Copyright &copy;</footer>
 
   <script>
       var xhttp = new XMLHttpRequest();

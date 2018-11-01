@@ -1,3 +1,7 @@
+#main_contact hr {
+  margin-bottom: 1rem;
+}
+
 #contact-form label {
   line-height: 1.5;
 }
@@ -16,7 +20,6 @@
 }
 
 #contact-form button {
-  background: #4aaaa5;
   color: #ffffff;
   padding: 0.5rem 1.5rem;
   border: none;

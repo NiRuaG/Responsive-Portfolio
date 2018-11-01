@@ -1,13 +1,28 @@
+main section:first-of-type {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #portfolio-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.portfolio-item-wrapper {
+  box-sizing: border-box; /* needed for border hover effect */
+  max-width: 32%;
+  margin: 1rem 0.25rem 0.5rem 0;
+  display: flex;
 }
 
 .portfolio-item {
   box-sizing: border-box; /* needed for border hover effect */
-  width: 32%;
-  margin: 1rem 0.25rem 0.5rem 0;
+  max-width: 100%;
   position: relative;
 }
 
@@ -38,17 +53,18 @@
 }
 
 .portfolio-item:hover::before {
-  border-top-color: #4aaaad;
-  border-right-color: #4aaaad;
-  transition: width 0.125s, /* width first */ height 0.125s 0.125s; /* then height */
+  border-top-color: #255c99;
+  border-right-color: #255c99;
+  transition: width  0.125s, /* width first */ 
+              height 0.125s 0.125s; /* then height */
 }
 
 .portfolio-item:hover::after {
-  border-bottom-color: #4aaaad;
-  border-left-color: #4aaaad;
+  border-bottom-color: #255c99;
+  border-left-color: #255c99;
   transition: border-color 0s 0.25s,
-    /*  Wait for ::before to finish before showing border */ width 0.125s
-      ease-out 0.25s,
+    /*  Wait for ::before to finish before showing border */ 
+    width 0.125s ease-out 0.25s,
     height 0.125s 0.375s;
 }
 
@@ -66,29 +82,29 @@
   padding: 0.75rem 0;
   white-space: nowrap;
   text-align: center;
-  background: #4aaaad; /* hover overrides */
-  color: #ffffff; /* hover overrides */
+  background: #255c99; /* hover overrides */
+  color: #d7ebba; /* hover overrides */
   width: 100%; /* hover overrides */
   transition: width 2s, opacity 1.25s 0.125s;
 }
 
 .portfolio-item:hover .banner {
-  color: #4aaaad;
-  background: #ffffff;
+  color: #255c99;
+  background: #d7ebba;
   width: 0;
   opacity: 0;
 }
 
 .portfolio-item .descrip {
-  color: #4aaaad;
-  background: #ffffff;
+  color: #255c99;
+  background: #d7ebba;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 3px 4px 2px 2px;
+  margin: 3px 3px 2px 2px;
   padding: 0.5rem;
   opacity: 0;
 }
@@ -108,14 +124,27 @@
 }
 
 @media screen and (max-width: 980px) {
-  .portfolio-item {
-    width: 48%;
+  /* main { background: yellow; } */
+
+  .portfolio-item-wrapper {
+    max-width: 48%;
+  }
+
+  .portfolio-item .descrip p {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
   }
 }
 
 @media screen and (max-width: 768px) {
+  /* main { background: orange; } */
+
+  .portfolio-item-wrapper {
+    max-width: 48%;
+    margin-top: 0.5rem;
+  }
+
   .portfolio-item {
-    width: 48%;
     margin-top: 0.5rem;
   }
 
@@ -125,9 +154,15 @@
 }
 
 @media screen and (max-width: 640px) {
+  /* main { background: red; } */
+
+  .portfolio-item-wrapper {
+    max-width: 100%;
+  }
+
   .portfolio-item {
-    width: 100%;
     margin-top: 0.25rem;
+    margin-right: 0;
   }
 
   .portfolio-item .banner {
