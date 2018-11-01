@@ -113,7 +113,7 @@ nav a:hover:not(.nav_here) {
 }
 
 nav a:nth-child(n + 2) {
-  border-left: 1px solid #d7ebba;
+  border-left: 1px solid #262626;
 }
 
 
